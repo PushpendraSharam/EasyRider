@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#7c72ae</color>
+    <color name="purple_500">#000000</color>
+    <color name="purple_700">#232f3e</color>//status bar color
+    <color name="teal_200">#7c72ae</color>
+    <color name="teal_700">#000000</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="gray">#959cb9</color>
+    <color name="lineColor">#232f3e</color>
+    <color name="startColor">#4f5b6b</color>
+    <color name="endColor">#232f3e</color>
+    <color name="viewColor">#232f3e</color>
+    <color name="searchColor">#DEE1E4</color>
+
+</resources>

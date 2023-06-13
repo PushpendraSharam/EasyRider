@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/homeBottomMenu" android:title="Home" android:icon="@drawable/home_vector_assets"/>
+    <item android:id="@+id/categoryBottomMenu" android:title="T&amp;C" android:icon="@drawable/about_us_vector_assets"/>
+    <item android:id="@+id/nearMeBottomMenu" android:title="Privacy Policy me" android:icon="@drawable/privacy_policy_image"/>
+    <item android:id="@+id/allDataBottomMenu" android:title="Profile" android:icon="@drawable/person_vector_assets"/>
+
+</menu>

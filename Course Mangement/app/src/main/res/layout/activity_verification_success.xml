@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    android:padding="10dp"
+    android:id="@+id/scrollBarVerificationLayout"
+    tools:context=".VerificationSuccess">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:src="@drawable/back_arrow_vector_assets" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/update_password_image"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/toolbarColor"
+            android:text="New Credentials"
+            android:textSize="40sp"
+            android:textAllCaps="true"
+            android:fontFamily="@font/code"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/toolbarColor"
+            android:text="Your Identity has been verified! Set your new password"
+            android:textSize="20sp"
+            android:fontFamily="@font/testfont"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textAlignment="center"
+            />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.FilledBox"
+            app:boxBackgroundColor="@color/white"
+            android:layout_marginTop="40dp"
+            android:hint="New Password"
+            app:startIconDrawable="@drawable/outiline_lock_vector_assets"
+            app:endIconMode="password_toggle"
+            app:endIconTint="@color/black"
+            app:hintTextColor="@color/black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/newPassword"
+                android:inputType="textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.FilledBox"
+            app:boxBackgroundColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:hint="Confirm Password "
+            app:startIconDrawable="@drawable/outiline_lock_vector_assets"
+            app:endIconMode="password_toggle"
+            app:endIconTint="@color/black"
+            app:hintTextColor="@color/black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/confirmPassword"
+                android:inputType="textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/successfullyVerifyButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="85dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="85dp"
+            android:background="@drawable/round"
+            android:backgroundTint="@null"
+            android:padding="5dp"
+            android:text="Submit"
+            android:textColor="@color/white"
+            android:textSize="21dp" />
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.Profile">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lightGray"
+        android:orientation="vertical">
+
+
+        <ScrollView
+            android:id="@+id/scrollViewMyProfileFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:background="@drawable/profile_image_background"
+                    android:orientation="vertical">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/imageViewMyProfileFragment"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="55dp"
+                        android:src="@drawable/demo_image" />
+
+                    <TextView
+                        android:id="@+id/nameMyProfileFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/font"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/profileTextSize" />
+                </LinearLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="-70dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="50dp"
+                    android:padding="5dp"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/font"
+                                android:text="Pin Code"
+                                android:textSize="@dimen/profileTittleTextSize" />
+
+                            <TextView
+                                android:id="@+id/emailMyProfileFragment"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/font"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/profileTextSize" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/font"
+                                android:text="Phone Number"
+                                android:textSize="@dimen/profileTittleTextSize" />
+
+                            <TextView
+                                android:id="@+id/mobileNumberMyProfileFragment"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/font"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:text=""
+
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/profileTextSize" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="1dp"
+                                android:fontFamily="@font/font"
+                                android:text="City"
+                                android:textSize="@dimen/profileTittleTextSize" />
+
+                            <TextView
+                                android:id="@+id/cityMyProfileFragment"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/font"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/profileTextSize" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="1dp"
+                                android:fontFamily="@font/font"
+                                android:text="Skill"
+                                android:textSize="@dimen/profileTittleTextSize" />
+
+                            <TextView
+                                android:id="@+id/skillMyProfileFragment"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/font"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/profileTextSize" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutMyProfileFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/font"
+                android:gravity="center"
+                android:paddingTop="13dp"
+                android:text="Please Register Yourself as Service Provider to View your Profile" />
+
+            <TextView
+                android:id="@+id/registerFromMyProfileFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/tv_customer_bg"
+                android:fontFamily="@font/font"
+                android:gravity="center"
+                android:paddingTop="13dp"
+                android:paddingBottom="13dp"
+                android:text="Register"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="19sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

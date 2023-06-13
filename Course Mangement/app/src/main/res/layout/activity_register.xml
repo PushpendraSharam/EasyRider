@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<LinearLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UnuseFile.Register">
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register Now!!"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="50dp"
+        android:gravity="center"/>
+    <LinearLayout
+        android:padding="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/registername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Input your Name"
+            android:inputType="text"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:layout_marginTop="50dp"/>
+        <EditText
+            android:id="@+id/registerEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Input your E-mail"
+            android:textSize="20sp"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:layout_marginTop="20dp"/>
+        <EditText
+            android:id="@+id/registerPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Input your Password"
+            android:textSize="20sp"
+            android:inputType="textWebPassword"
+            android:padding="10dp"
+            android:layout_marginTop="20dp"/>
+        <EditText
+            android:id="@+id/registerlocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Input your location"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:layout_marginTop="20dp"/>
+        <EditText
+            android:id="@+id/registerStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Input your your status 1 OR 0"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:inputType="number"
+            android:layout_marginTop="20dp"/>
+        <EditText
+            android:id="@+id/registerPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Input your Mobile Number"
+            android:inputType="number"
+
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:layout_marginTop="20dp"/>
+    </LinearLayout>
+<Button
+    android:id="@+id/registerButtonActivity"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="@color/white"
+    android:textSize="21sp"
+    android:text="Register"
+    android:layout_marginTop="20dp"
+    android:layout_gravity="center"/>
+</LinearLayout>
+</ScrollView>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LocationActivity">
+    <ImageView
+        android:id="@+id/locationBackButton"
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        style="?android:borderlessButtonStyle"
+        android:src="@drawable/back_arrow_vector_assets"/>
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/map"
+        android:layout_gravity="center"/>
+    <TextView
+        android:id="@+id/log"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="Select your Location"
+        android:textColor="@color/black"
+        android:textSize="25sp" />
+    <TextView
+        android:id="@+id/let"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Switch on your location to stay in tune with what's happening in your area"
+        android:textSize="15sp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="You Zone"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="17dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="-20dp"
+        android:orientation="vertical"
+        app:boxStrokeWidth="0dp"
+
+        app:boxStrokeWidthFocused="0dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/zone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundColor="@android:color/transparent"
+            android:background="@android:color/transparent"
+            android:textCursorDrawable="@color/black"
+            android:text=""
+            android:inputType="none"
+            android:drawableRight="@drawable/right_arrow_vector_assets"
+            />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/lightGray" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="You Area"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="17sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="-20dp"
+        android:orientation="vertical"
+        app:boxStrokeWidth="0dp"
+
+        app:boxStrokeWidthFocused="0dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundColor="@android:color/transparent"
+            android:background="@android:color/transparent"
+            android:textCursorDrawable="@color/black"
+            android:inputType="none"
+            android:drawableRight="@drawable/right_arrow_vector_assets"
+            />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/lightGray" />
+    <Button
+        android:id="@+id/locationSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="Submit"
+        android:textAllCaps="false"
+        android:background="@drawable/round_button"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/white"
+        android:layout_marginRight="20dp"
+        android:padding="10dp"
+        android:layout_marginTop="55dp"/>
+
+</LinearLayout>

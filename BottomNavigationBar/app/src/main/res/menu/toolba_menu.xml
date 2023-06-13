@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item android:id="@+id/notificaion"   android:showAsAction="always"
+
+        tools:ignore="AppCompatResource" android:icon="@drawable/notifications" android:title="Notification" app:showAsAction="always"/>
+<item android:id="@+id/privacy_policy" android:icon="@drawable/privacy_policy" android:title="Privacy Policy"/>
+    <item android:id="@+id/RateUs" android:icon="@drawable/rate_us" android:title="Rate Us" />
+    <item android:id="@+id/about" android:icon="@drawable/about" android:title="About"/>
+
+</menu>

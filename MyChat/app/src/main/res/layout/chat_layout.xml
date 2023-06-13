@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainChatLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/messageTimeLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/receiver_chat_layout"
+        android:weightSum="10">
+
+        <TextView
+            android:id="@+id/messageTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="9"
+            android:paddingStart="15dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="5dp"
+            android:text="Message"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/currentTimeTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="-10dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="5dp"
+            android:text="09:08"
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+
+
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/userImageView"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+
+        android:visibility="visible"
+        />
+
+
+
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeMenu"
+        android:icon="@drawable/home_vector_assets"
+        android:title="Home" />
+    <item
+        android:id="@+id/profileMenu"
+        android:icon="@drawable/person_vector_assets"
+        android:title="My Profile" />
+    <!--   <item android:id="@+id/updateProfileMenu" android:title="Update Profile" android:icon="@drawable/update_vector_assets"/>-->
+    <item
+        android:id="@+id/registerAsServiceProviderMenu"
+        android:icon="@drawable/register_yourself_vector_assets"
+        android:title="Register As Service Provider" />
+    <item
+        android:id="@+id/privacyPolicyMenu"
+        android:icon="@drawable/privacy_policy_vector_assets"
+        android:title="Privacy Policy" />
+    <item
+        android:id="@+id/termsAndConditionMenu"
+        android:icon="@drawable/about_us_vector_assets"
+        android:title="Terms and Condition" />
+    <item
+        android:id="@+id/rateMenu"
+        android:icon="@drawable/rate_vector_assets"
+        android:title="Rate Us" />
+    <item
+        android:id="@+id/shareMenu"
+        android:icon="@drawable/share_vector_assets"
+        android:title="Share" />
+    <item
+        android:id="@+id/logoutMenu"
+        android:icon="@drawable/logout_vector_assets"
+        android:title="Log out" />
+
+</menu>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/codeVeryScrollView"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    tools:context=".CodeVerify">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <ImageView
+            android:id="@+id/closeImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:src="@drawable/close_vecotor_assets" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/code"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="Co\nde"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/toolbarColor"
+            android:textSize="100sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/code"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="Verification"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/toolbarColor"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/testfont"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="Enter one time OTP send to your Email"
+            android:textAlignment="center"
+            android:textColor="@color/toolbarColor"
+            android:textSize="21sp" />
+
+
+
+        <com.chaos.view.PinView
+            android:id="@+id/otpCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:width="50dp"
+            android:height="50dp"
+            android:layout_marginTop="30dp"
+            android:inputType="number"
+            android:cursorVisible="true"
+            app:cursorColor="@color/toolbarColor"
+            android:textColor="@color/toolbarColor"
+            app:itemRadius="5dp"
+            app:itemSpacing="15dp"
+            app:itemCount="4"
+            style="@style/PinWidget.PinView"/>
+
+        <TextView
+            android:id="@+id/resendCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/testfont"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="end"
+            android:layout_gravity="end"
+            android:includeFontPadding="false"
+            android:text="Resend Now"
+            android:textColor="@color/toolbarColor"
+            android:textSize="21sp" />
+
+
+        <Button
+            android:id="@+id/verifyCodeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round"
+            android:backgroundTint="@null"
+            android:layout_marginTop="30dp"
+            android:text="Verify Code"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="19dp" />
+
+    </LinearLayout>
+
+</ScrollView>

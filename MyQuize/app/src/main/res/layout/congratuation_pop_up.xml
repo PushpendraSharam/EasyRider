@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
+        android:src="@drawable/trophy_" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/roboto"
+        android:gravity="center"
+        android:text="Congratulation!\nYou have won"
+        android:textColor="#12d6ad"
+        android:textSize="23sp" />
+    <TextView
+        android:id="@+id/winCoins"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/roboto"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="100 Coins"
+        android:textColor="#12d6ad"
+        android:textSize="20sp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:weightSum="2"
+        >
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Check Balance"
+            android:textColor="@color/white"
+            android:layout_gravity="start"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="15dp"
+            android:background="#07d4a9"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/okBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ok"
+            android:layout_marginStart="15dp"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:layout_gravity="end"
+            android:layout_marginTop="5dp"
+            android:background="#07d4a9"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

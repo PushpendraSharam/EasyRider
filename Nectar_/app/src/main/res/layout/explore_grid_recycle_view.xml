@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/exploreGridLayoutCardView"
+    android:layout_width="160dp"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="15dp"
+    android:padding="5dp"
+    app:strokeWidth="1dp"
+    app:cardUseCompatPadding="true">
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+       >
+       <ImageView
+           android:id="@+id/exploreAdapterImageView"
+           android:layout_width="match_parent"
+           android:layout_height="135dp"
+           android:paddingLeft="25dp"
+           android:paddingRight="25dp"
+           android:src="@drawable/fruits_and_vegetables"/>
+       <TextView
+           android:id="@+id/exploreAdapterTextView"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:textColor="@color/black"
+           android:textStyle="bold"
+           android:textSize="17sp"
+           android:paddingLeft="25dp"
+           android:paddingRight="25dp"
+           android:fontFamily="@font/poppins_light"
+           android:layout_marginTop="-20dp"
+           android:layout_marginBottom="10dp"
+           android:text="Fruits and Vegetables"/>
+   </LinearLayout>
+
+
+</com.google.android.material.card.MaterialCardView>
