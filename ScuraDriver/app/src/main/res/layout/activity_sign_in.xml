@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignIn">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/_130sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_70sdp"
+            android:background="@drawable/scura_logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Sign in"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15sdp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etusername"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:hint="Username or Phone"
+                app:boxStrokeColor="@color/blueColor"
+                app:endIconMode="clear_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etmobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="@dimen/_13sdp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/password"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="25dp"
+                android:hint="Enter Your Password"
+                app:boxStrokeColor="@color/blueColor"
+                app:endIconMode="clear_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etpassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="@dimen/_13sdp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center_vertical">
+
+                <CheckBox
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_30sdp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Show Password"
+                    android:textSize="@dimen/_15sdp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/btn_forgetpassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:clickable="true"
+                    android:fontFamily="sans-serif-medium"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:text="Forget password?"
+                    android:textColor="@color/blueColor"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/_13sdp" />
+            </RelativeLayout>
+
+            <TextView
+
+                android:id="@+id/nextBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btnshape"
+                android:clickable="true"
+                android:foreground="?android:selectableItemBackground"
+                android:gravity="center"
+                android:text="Next"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_17sdp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="Don't have account ?"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/_13sdp" />
+
+
+                <TextView
+                    android:id="@+id/btn_createaccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="1dp"
+                    android:clickable="true"
+                    android:fontFamily="sans-serif-medium"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:text="Create a new account"
+                    android:textColor="@color/blueColor"
+                    android:textSize="@dimen/_13sdp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
