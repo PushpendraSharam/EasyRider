@@ -34,11 +34,19 @@ public class Dashboard extends AppCompatActivity {
         binding.drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
         View header = binding.navigationBar.getHeaderView(0);
-        LinearLayout linearLayout = header.findViewById(R.id.incentivesBtn);
-        linearLayout.setOnClickListener(new View.OnClickListener() {
+
+        LinearLayout incentives = header.findViewById(R.id.incentivesBtn);
+        LinearLayout rewards = header.findViewById(R.id.rewards);
+        incentives.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Dashboard.this, Incentives.class));
+            }
+        });
+        rewards.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Dashboard.this, Rewards.class));
             }
         });
 
