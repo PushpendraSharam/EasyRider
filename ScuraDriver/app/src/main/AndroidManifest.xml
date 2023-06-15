@@ -12,7 +12,10 @@
         android:theme="@style/Theme.ScuraDriver"
         tools:targetApi="31">
         <activity
-            android:name=".KnowMoreHealth"
+            android:name=".Activities.KnonMoreAccidentalInsurance"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.KnowMoreHealth"
             android:exported="false" />
         <activity
             android:name=".Activities.Rewards"
