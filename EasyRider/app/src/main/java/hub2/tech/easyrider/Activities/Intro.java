@@ -3,10 +3,12 @@ package hub2.tech.easyrider.Activities;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import hub2.tech.easyrider.Adapters.SliderAdapter;
 import hub2.tech.easyrider.R;
@@ -17,6 +19,8 @@ public class Intro extends AppCompatActivity {
     ActivityIntroBinding binding;
     TextView dots[];
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,13 +30,25 @@ public class Intro extends AppCompatActivity {
         binding.nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (getItem(0) < 3) {
+
+                if (getItem(0) < 2) {
                     binding.sliderViewPager.setCurrentItem(getItem(1), true);
+                } else {
+                    startActivity(new Intent(Intro.this, Welcome.class));
+                    finish();
                 }
+
             }
         });
         setUpIndicators(0);
         binding.sliderViewPager.addOnPageChangeListener(listener);
+        binding.skipBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Intro.this, Welcome.class));
+                finish();
+            }
+        });
 
     }
 

@@ -105,6 +105,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
@@ -114,6 +115,7 @@
                     android:orientation="vertical">
 
                     <EditText
+                        android:id="@+id/numberEditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@color/white"
@@ -145,6 +147,7 @@
                 />
 
             <TextView
+                android:id="@+id/continueBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
