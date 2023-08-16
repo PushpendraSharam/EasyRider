@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/sliderImage"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:src="@drawable/slider_image_1" />
+
+    <TextView
+        android:id="@+id/sliderTittle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/source_sans_pro"
+        android:gravity="center"
+        android:layout_marginTop="-10dp"
+        android:text="Discover Your Ride"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/sliderSubTittle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+
+        android:fontFamily="@font/source_sans_pro"
+        android:gravity="center"
+        android:text="Experience the convenience of reliable, on-demand transportation that fits seamlessly into your life."
+        android:textSize="16sp" />
+
+</LinearLayout>
