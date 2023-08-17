@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
-import services.on.servicesontap.CustomClass.CommonFunctionAndClasses;
+import services.on.servicesontap.CustomClass.Utils;
 import services.on.servicesontap.R;
 
 
@@ -26,7 +26,7 @@ public class Privacy extends Fragment {
 
         View view= inflater.inflate(R.layout.fragment_privacy, container, false);
         privacy=view.findViewById(R.id.tv_privacy);
-        privacy.setText(CommonFunctionAndClasses.privacy);
+        privacy.setText(Utils.privacy);
         return view;
     }
 }

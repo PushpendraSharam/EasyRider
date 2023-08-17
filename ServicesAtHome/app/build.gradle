@@ -9,10 +9,14 @@ android {
         applicationId "services.on.servicesontap"
         minSdk 22
         targetSdk 33
-        versionCode 7
-        versionName "4.0"
+        versionCode 10
+        versionName "7.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+    buildFeatures
+            {
+                viewBinding true
+            }
 
     buildTypes {
         release {
@@ -49,8 +53,6 @@ dependencies {
     // Circle Indicator (To fix the xml preview "Missing classes" error)
     implementation 'me.relex:circleindicator:2.1.6'
     implementation 'org.imaginativeworld.whynotimagecarousel:whynotimagecarousel:2.1.0'
-          
-
 
 
 }

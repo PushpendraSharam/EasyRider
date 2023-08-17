@@ -4,15 +4,10 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.ProgressBar;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.snackbar.Snackbar;
-import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.List;
 
@@ -23,64 +18,55 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import services.on.servicesontap.APIs.Api;
 import services.on.servicesontap.Controler.Controller;
-import services.on.servicesontap.CustomClass.CommonFunctionAndClasses;
+import services.on.servicesontap.CustomClass.Utils;
 import services.on.servicesontap.ModalClass.PostalCodeResponse;
 import services.on.servicesontap.ModalClass.RegisterWorkerModal;
 import services.on.servicesontap.R;
+import services.on.servicesontap.databinding.ActivityLoginCustomerBinding;
 
 public class LoginCustomer extends AppCompatActivity {
-    TextView tvContinue, termsAndConditionCustomer;
-    ImageView backButtonImageView;
-    TextInputLayout name, email, pinCode;
+   ActivityLoginCustomerBinding binding;
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
-    LinearLayout linearLayout;
-    ProgressBar progressBar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login_customer);
-        tvContinue = findViewById(R.id.tvContinue);
-        backButtonImageView = findViewById(R.id.imageBackButtonLoginCustomer);
-        name = findViewById(R.id.nameCustomer);
-        email = findViewById(R.id.emailCustomer);
-        pinCode = findViewById(R.id.pinCodeCustomer);
-        linearLayout = findViewById(R.id.loginCustomerLinearLayout);
-        termsAndConditionCustomer = findViewById(R.id.termsAndConditionCustomer);
-        progressBar = findViewById(R.id.progressBarLoginCustomer);
-        progressBar.setVisibility(View.GONE);
-        backButtonImageView.setOnClickListener(new View.OnClickListener() {
+        binding=ActivityLoginCustomerBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+        binding.imageBackButtonLoginCustomer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 onBackPressed();
             }
         });
-        tvContinue.setOnClickListener(new View.OnClickListener() {
+        binding.continueBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                name.setError("");
-                name.setErrorEnabled(false);
-                email.setError("");
-                email.setErrorEnabled(false);
-                pinCode.setError("");
-                pinCode.setErrorEnabled(false);
+                binding.nameCustomer.setError("");
+                binding.nameCustomer.setErrorEnabled(false);
+                binding.emailCustomer.setError("");
+                binding.emailCustomer.setErrorEnabled(false);
+                binding.pinCodeCustomer.setError("");
+                binding.pinCodeCustomer.setErrorEnabled(false);
 
-                String varName = name.getEditText().getText().toString();
-                String varEmail = email.getEditText().getText().toString();
-                String varPinCode = pinCode.getEditText().getText().toString();
+                String varName =  binding.nameCustomer.getEditText().getText().toString();
+                String varEmail =  binding.emailCustomer.getEditText().getText().toString();
+                String varPinCode =  binding.pinCodeCustomer.getEditText().getText().toString();
                 if (!varName.isEmpty()) {
-                    name.setError("");
-                    name.setErrorEnabled(false);
+                    binding.nameCustomer.setError("");
+                    binding.nameCustomer.setErrorEnabled(false);
                     if (!varEmail.isEmpty()) {
-                        name.setError("");
-                        name.setErrorEnabled(false);
+                        binding.nameCustomer.setError("");
+                        binding.nameCustomer.setErrorEnabled(false);
                         if (varEmail.matches(emailPattern)) {
-                            email.setError("");
-                            email.setErrorEnabled(false);
+                            binding.emailCustomer.setError("");
+                            binding.emailCustomer.setErrorEnabled(false);
                             if (!varPinCode.isEmpty()) {
-                                pinCode.setError("");
-                                pinCode.setErrorEnabled(false);
-                                progressBar.setVisibility(View.VISIBLE);
+                                binding.pinCodeCustomer.setError("");
+                                binding.pinCodeCustomer.setErrorEnabled(false);
+                                binding.progressBarLoginCustomer.setVisibility(View.VISIBLE);
                                 String url = "https://api.postalpincode.in/";
                                 Retrofit retrofit = new Retrofit.Builder().baseUrl(url).addConverterFactory(GsonConverterFactory.create()).build();
                                 Api api = retrofit.create(Api.class);
@@ -94,17 +80,17 @@ public class LoginCustomer extends AppCompatActivity {
 
                                             if (result != null) {
 
-                                                Call<RegisterWorkerModal> savingUserDataApi = Controller.getInstance().getApi().registerCustomer(varName, varEmail, CommonFunctionAndClasses.UniqueUserCode);
+                                                Call<RegisterWorkerModal> savingUserDataApi = Controller.getInstance().getApi().registerCustomer(varName, varEmail, Utils.UniqueUserCode);
                                                 savingUserDataApi.enqueue(new Callback<RegisterWorkerModal>() {
                                                     @Override
                                                     public void onResponse(Call<RegisterWorkerModal> savingUserDataApi, Response<RegisterWorkerModal> response) {
                                                         RegisterWorkerModal obj = response.body();
                                                         if (obj.getResult().equals("-1")) {
-                                                            progressBar.setVisibility(View.GONE);
+                                                            binding.progressBarLoginCustomer.setVisibility(View.GONE);
                                                             snackBarMessage("Something Went Wrong");
                                                         } else if (obj.getResult().equals("-2")) {
-                                                            progressBar.setVisibility(View.GONE);
-                                                            email.setError("Email Already Register");
+                                                            binding.progressBarLoginCustomer.setVisibility(View.GONE);
+                                                            binding.emailCustomer.setError("Email Already Register");
 
                                                         } else {
                                                             //Saving to SP so that In my profile we can get to know that user as Register
@@ -114,7 +100,7 @@ public class LoginCustomer extends AppCompatActivity {
                                                             editor.putString("user_email", varEmail);
                                                             editor.putString("user_PinCode",varPinCode);
                                                             editor.apply();
-                                                            progressBar.setVisibility(View.GONE);
+                                                            binding.progressBarLoginCustomer.setVisibility(View.GONE);
                                                             startActivity(new Intent(LoginCustomer.this, MainActivity.class));
                                                             finishAffinity();
 
@@ -127,9 +113,9 @@ public class LoginCustomer extends AppCompatActivity {
                                                     }
                                                 });
                                             } else {
-                                                progressBar.setVisibility(View.INVISIBLE);
-                                                pinCode.setErrorEnabled(true);
-                                                pinCode.setError("Invalid PinCode ");
+                                                binding.progressBarLoginCustomer.setVisibility(View.INVISIBLE);
+                                                binding.pinCodeCustomer.setErrorEnabled(true);
+                                                binding.pinCodeCustomer.setError("Invalid PinCode ");
                                             }
 
 
@@ -148,28 +134,28 @@ public class LoginCustomer extends AppCompatActivity {
 
 
                             } else {
-                                pinCode.setErrorEnabled(true);
-                                pinCode.setError("PinCode Can't be Empty");
+                                binding.pinCodeCustomer.setErrorEnabled(true);
+                                binding.pinCodeCustomer.setError("PinCode Can't be Empty");
                             }
 
                         } else {
-                            email.setErrorEnabled(true);
-                            email.setError("Invalid Email");
+                            binding.emailCustomer.setErrorEnabled(true);
+                            binding.emailCustomer.setError("Invalid Email");
                         }
 
                     } else {
-                        email.setErrorEnabled(true);
-                        email.setError("Email Can't be Empty");
+                        binding.emailCustomer.setErrorEnabled(true);
+                        binding.emailCustomer.setError("Email Can't be Empty");
                     }
                 } else {
-                    name.setErrorEnabled(true);
-                    name.setError("Name Can't be Empty");
+                    binding.nameCustomer.setErrorEnabled(true);
+                    binding.nameCustomer.setError("Name Can't be Empty");
                 }
 
 
             }
         });
-        termsAndConditionCustomer.setOnClickListener(new View.OnClickListener() {
+        binding.termsAndConditionCustomer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(LoginCustomer.this, TermsAndCondition.class));
@@ -178,7 +164,7 @@ public class LoginCustomer extends AppCompatActivity {
     }
 
     public void snackBarMessage(String message) {
-        Snackbar.make(linearLayout, message, Snackbar.LENGTH_SHORT)
+        Snackbar.make(binding.loginCustomerLinearLayout, message, Snackbar.LENGTH_SHORT)
                 .setActionTextColor(getResources().getColor(R.color.white))
                 .setTextColor(getResources().getColor(R.color.white))
                 .setBackgroundTint(getResources().getColor(R.color.redErrorColor))

@@ -1,29 +1,25 @@
 package services.on.servicesontap.Activities;
 
-import static services.on.servicesontap.CustomClass.CommonFunctionAndClasses.terms;
+import static services.on.servicesontap.CustomClass.Utils.terms;
 
 import android.os.Bundle;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
 import java.util.Objects;
 
-import services.on.servicesontap.R;
+import services.on.servicesontap.databinding.ActivityTermsAndConditionBinding;
 
 public class TermsAndCondition extends AppCompatActivity {
-   Toolbar toolbar;
-   TextView tvTerms;
+    ActivityTermsAndConditionBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_terms_and_condition);
-        toolbar=findViewById(R.id.termsAndConditionToolbar);
-        tvTerms=findViewById(R.id.tv_termsAndCondition);
-        setSupportActionBar(toolbar);
+        binding=ActivityTermsAndConditionBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+        setSupportActionBar(binding.termsAndConditionToolbar);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
-              tvTerms.setText(terms);
+              binding.tvTermsAndCondition.setText(terms);
     }
 
     @Override

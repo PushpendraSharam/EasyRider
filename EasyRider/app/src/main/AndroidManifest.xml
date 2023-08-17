@@ -12,8 +12,11 @@
         android:theme="@style/Theme.EasyRider"
         tools:targetApi="31">
         <activity
+            android:name=".Activities.Permissions"
+            android:exported="false" />
+        <activity
             android:name=".Activities.Splash"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,24 +28,16 @@
             android:exported="true" />
         <activity
             android:name=".Activities.Register"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".Activities.PhoneVerification"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".Activities.Welcome"
             android:exported="true" />
         <activity
             android:name=".Activities.Intro"
             android:exported="true" />
-
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
 
         <meta-data
             android:name="preloaded_fonts"

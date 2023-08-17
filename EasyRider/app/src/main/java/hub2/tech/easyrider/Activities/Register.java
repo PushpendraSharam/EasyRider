@@ -25,7 +25,7 @@ public class Register extends AppCompatActivity {
         binding.continueBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Register.this,DashBoard.class));
+                startActivity(new Intent(Register.this,Permissions.class));
             }
         });
 

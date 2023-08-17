@@ -23,8 +23,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        toggleColorStatusBar(MainActivity.this);
-        transparentStatusBar(getWindow());
+
 
         binding.singInBtn.setOnClickListener(new View.OnClickListener() {
             @Override

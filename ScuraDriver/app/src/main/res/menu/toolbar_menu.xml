@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/home"
-        android:icon="@drawable/home_vector_assets"
+        android:id="@+id/nav_home"
+        android:icon="@drawable/driver_handle_icon"
         android:title="Home" />
     <item
-        android:id="@+id/home1"
-        android:icon="@drawable/home_vector_assets"
+        android:id="@+id/nav_ruppe"
+        android:icon="@drawable/ruppe_icon"
         android:title="Home" />
     <item
         android:id="@+id/home2"
-        android:icon="@drawable/home_vector_assets"
+        android:icon="@drawable/trophy_icon"
         android:title="Home" />
+    <item
+        android:id="@+id/home3"
+        android:icon="@drawable/message_icon"
+        android:title="Home" />
+    <item
+        android:id="@+id/home4"
+        android:icon="@drawable/person_icon"
+        android:title="Home"/>
 
 
 </menu>
