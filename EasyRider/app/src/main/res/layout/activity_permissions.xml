@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    tools:context=".Activities.Permissions">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="15dp"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:src="@drawable/permisson_image" />
+
+        <TextView
+            android:id="@+id/sliderTittle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="-40dp"
+            android:fontFamily="@font/source_sans_pro"
+            android:gravity="center"
+            android:text="Location Permission"
+            android:textColor="@color/black"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/sliderSubTittle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/source_sans_pro"
+            android:gravity="center"
+            android:text="Customize Your Journey: Grant Us Access to Your Location"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/continueBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_bg"
+        android:elevation="2dp"
+        android:fontFamily="@font/source_sans_pro"
+        android:gravity="center"
+        android:padding="8dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:text="Allow permissoin"
+        android:textColor="@color/white"
+        android:textSize="19sp" />
+</RelativeLayout>
